@@ -233,25 +233,37 @@ function slideDown(){
     }
 }
 
-function isGameOver(){
-    for (let r = 0; r < rows; r++){
-        for (let c = 0; c < columns - 1; c++){
+function isGameOver() {
+    // Checking for any empty tiles
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] === 0) {
+                return false; // Game is not over; empty tile exists
+            }
+        }
+    }
+
+    // Check for rows
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns - 1; c++) {
             if (board[r][c] === board[r][c + 1]) {
-                return false; // A move is possible
+                return false;
             }
         }
     }
 
-    for (let r = 0; r < rows - 1; r++){
-        for (let c = 0; c < columns; c++){
+    // Check for columns
+    for (let r = 0; r < rows - 1; r++) {
+        for (let c = 0; c < columns; c++) {
             if (board[r][c] === board[r + 1][c]) {
-                return false; // A move is possible
+                return false; 
             }
         }
     }
 
-    return true; // No moves are possible
+    return true; //game over
 }
+
 
 function displayOver(){
     if (gameOver) return; // Avoid multiple calls
