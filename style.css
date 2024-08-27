@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.918);
+    color: #e5e5e5;
+}
+
+h1{
+    font-size: 3rem; 
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold; 
+    color: #333; 
+    text-align: center;  
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    padding: 10px; 
+    background: linear-gradient(45deg, #1565c0, #90caf9); 
+    border-radius: 10px; 
+    width: 30vw;
+    margin-left: 34vw;
+}
+
+
+hr{
+    width: 500px;
+}
+
+#board{
+    height: 400px;
+    width: 400px;
+
+    background-color: rgba(58, 53, 53, 0.465);
+    border: 6px solid #0466c8;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 90px;
+    height: 90px;
+    border: 5px solid #4895ef;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* coloring the tiles */
+
+.n2 { background-color: #80ffdb; color: rgb(13, 25, 25); }
+.n4 { background-color: #64dfdf; color: rgb(24, 58, 58); }
+.n8 { background-color: #56cfe1; color: rgb(49, 54, 54); }
+.n16 { background-color: #48bfe3; color: aqua; }
+.n32 { background-color: #4ea8de; color: rgb(13, 25, 25); }
+.n64 { background-color: #5390d9; color: rgb(41, 44, 44); }
+.n128 { background-color: #5e60ce; color: aqua; }
+.n256 { background-color: #6930c3; color: rgb(13, 25, 25); }
+.n512 { background-color: #7400b8; color: rgb(158, 170, 170); }
+.n1024 { background-color: rgb(37, 31, 23); color: rgb(158, 170, 170); }
+.n2048 { background-color: bisque; color: aqua; }
+.default { background-color: rgb(67, 69, 182); color: aqua; }
+
+#gameover, #win{
+    margin-left: 39vw ;
+    margin-top: 20px;
+    font-size: 5vh;
+    background-color: #1565c0;
+    color: #b5d5ef;
+    width: 20vw;
+    padding: 10px;
+    border-radius: 20px;
+}
+
