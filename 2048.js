@@ -81,7 +81,7 @@ function updateTile(tile, num){
     if (num >= 2){
         tile.innerText = num;
         if (num <= 2048){
-            tile.classList.add("n" + num.toString()); // to add that css style
+            tile.classList.add("n" + num.toString()); // class to add that css style
         } else {
             tile.classList.add("default");
         }
@@ -183,9 +183,9 @@ function leftClick(){
 
 function rightClick(){
     for (let r = 0; r < rows; r++){
-        let row = board[r];
+        let row = board[r]; // full array of row
         row = slideRight(row);
-        board[r] = row;
+        board[r] = row; // reassign new value
 
         for (let c = 0; c < columns; c++){
             let tile = document.getElementById(r.toString() + "-" + c.toString());
@@ -238,10 +238,12 @@ function isGameOver() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             if (board[r][c] === 0) {
-                return false; // Game is not over; empty tile exists
+                return false; // Game is not over, empty tile exists
             }
         }
     }
+
+    // even if no empty tiles
 
     // Check for rows
     for (let r = 0; r < rows; r++) {
